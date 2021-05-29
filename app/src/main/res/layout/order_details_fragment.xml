@@ -1,0 +1,314 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/listEmployeeDetails"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:id="@+id/lLayoutGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+
+        <LinearLayout
+            android:id="@+id/LLButton"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:weightSum="2.5">
+
+            <Button
+                android:id="@+id/btnReset"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:textColor="@color/basic_title"
+                android:background="@drawable/textbox_design"
+                android:text="Reset"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"/>
+            <Button
+                android:id="@+id/btnAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:background="@drawable/textbox_design"
+                android:textColor="@color/basic_title"
+                android:text="Add"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/LLQuantity"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <TextView
+                android:layout_width="@dimen/label_width"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="2.8"
+                android:text="Quantity"
+                android:textSize="@dimen/basic_font"
+                android:textStyle="normal|bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="4"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <Button
+                    android:id="@+id/btnRemove"
+                    android:layout_width="47dp"
+                    android:background="@drawable/ic_remove_black_24dp"
+                    android:layout_height="@dimen/basic_height"
+                    android:layout_weight=".1" />
+
+                <EditText
+                    android:id="@+id/txtQuantity"
+                    android:layout_width="@dimen/textbox_height"
+                    android:layout_height="@dimen/basic_height"
+                    android:layout_weight="3"
+                    android:text="1"
+                    android:background="@drawable/textbox_design"
+                    android:gravity="center" />
+                <Button
+                    android:id="@+id/btnAddQ"
+                    android:layout_width="47dp"
+                    android:background="@drawable/ic_add_black_24dp"
+                    android:layout_height="@dimen/basic_height"
+                    android:layout_weight=".1" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LLText"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Order Product Details"
+                android:textAlignment="center"
+                android:textColor="@color/basic_title"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/LLPrice"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="@dimen/label_width"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="2"
+                android:text="Shipping Cost"
+                android:textSize="@dimen/basic_font"
+                android:textStyle="normal|bold" />
+
+            <EditText
+                android:id="@+id/txtHPrice1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"/>
+
+            <EditText
+                android:id="@+id/txtPrice"
+                android:enabled="true"
+                android:layout_width="@dimen/textbox_height"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="4"
+                android:inputType="numberDecimal"
+                android:background="@drawable/textbox_design"
+                android:textColor="#000"
+                android:gravity="center" />
+        </LinearLayout>
+        <LinearLayout
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:weightSum="2.1">
+            <Button
+                android:id="@+id/btnOrder"
+                android:visibility="visible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:background="@drawable/cancel_button"
+                android:textColor="@color/white"
+                android:text="Preview Order"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"/>
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:background="@drawable/single_btn"
+                android:text="Delivered"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:background="@color/basic_title"
+            android:weightSum="4">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/Invoice"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/Product"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/Quantity"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:text="Price"
+                android:textAlignment="center"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <ListView
+                android:id="@android:id/list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alwaysDrawnWithCache="true"
+                android:dividerHeight="1dp"
+                android:horizontalSpacing="3dp"
+                android:scrollingCache="true"
+                android:smoothScrollbar="true"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="3dp">
+            </ListView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:background="@color/basic_title"
+            android:weightSum="4">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/Total"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:text=" "
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/totalAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textAlignment="center"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>

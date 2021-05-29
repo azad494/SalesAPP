@@ -1,0 +1,242 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/report"
+        android:textAlignment="center"
+        android:textColor="@color/basic_title"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="30dp"
+        android:background="#03A77C"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        />
+
+
+
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioGroup
+            android:layout_margin="10dp"
+            android:id="@+id/reportSP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rdDtoDSalesWSignature"
+                android:checked="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date to Date Sales With Signature"
+                android:textSize="20dp" />
+
+            <RadioButton
+                android:id="@+id/rdDateWiseAllCustSales"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date Wise All Customer Sales"
+                android:textSize="20dp" />
+
+            <RadioButton
+                android:id="@+id/rdSalesInvoice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sales Invoice"
+                android:textSize="20dp" />
+
+            <RadioButton
+                android:textSize="20dp"
+                android:visibility="visible"
+                android:id="@+id/rdDateToDateExpance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date To Date Expanse" />
+
+            <RadioButton
+                android:textSize="20dp"
+                android:visibility="visible"
+                android:id="@+id/rdDailyDueCollection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date To Date Due Collection" />
+
+            <RadioButton
+                android:textSize="20dp"
+                android:visibility="visible"
+                android:id="@+id/rdDateWiseAllSuppPurchase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date wise all supplier purchase" />
+            <RadioButton
+                android:textSize="20dp"
+                android:visibility="visible"
+                android:id="@+id/rdWhInInvoiceReport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Send Warehouse Invoice Report" />
+            <RadioButton
+                android:textSize="20dp"
+                android:visibility="visible"
+                android:id="@+id/rdWarehouseOut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Warehouse Out Report" />
+            <RadioButton
+                android:textSize="20dp"
+                android:visibility="visible"
+                android:id="@+id/rdDtoDWarehouseIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date to Date Warehouse in" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/llWarehouse"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:orientation="horizontal"
+            android:weightSum="6">
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="4"
+                android:text="Warehouse"
+                android:gravity=""
+                android:textSize="@dimen/basic_font"
+                android:textStyle="normal|bold" />
+
+            <Spinner
+                android:id="@+id/spWarehouse"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/basic_height"
+                android:background="@drawable/spinner_bg"
+                android:layout_weight="2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LLInvoice"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <TextView
+                android:layout_width="@dimen/label_width"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="2"
+                android:text="Invoice No"
+                android:textSize="@dimen/basic_font"
+                android:textStyle="normal|bold" />
+
+            <EditText
+                android:id="@+id/txtInvoice"
+                android:layout_width="@dimen/textbox_height"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="4"
+                android:background="@drawable/textbox_design"
+                android:textColor="#000"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llStartDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <TextView
+                android:layout_width="@dimen/label_width"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="2"
+                android:text="Start Date"
+                android:textSize="@dimen/basic_font"
+                android:textStyle="normal|bold" />
+
+            <EditText
+                android:layout_width="@dimen/textbox_height"
+                android:layout_height="@dimen/basic_height"
+                android:layout_marginBottom="@dimen/basic_MarginBottom"
+                android:background="@drawable/textbox_design"
+                android:id="@+id/Date1"
+                android:layout_weight="4"
+                android:clickable="true"
+                android:focusable="false"
+                android:gravity="center"
+                android:hint="Start Date"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/llEndDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <TextView
+                android:id="@+id/EndDate"
+                android:layout_width="@dimen/label_width"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="2"
+                android:text="End Date"
+                android:textSize="@dimen/basic_font"
+                android:textStyle="normal|bold" />
+
+            <EditText
+                android:layout_width="@dimen/textbox_height"
+                android:layout_height="@dimen/basic_height"
+                android:layout_marginBottom="@dimen/basic_MarginBottom"
+                android:background="@drawable/textbox_design"
+                android:id="@+id/txtMDate"
+                android:layout_weight="4"
+                android:clickable="true"
+                android:focusable="false"
+                android:gravity="center"
+                android:hint="End Date"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnPreview"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:layout_marginTop="20dp"
+
+            android:background="#03A77C"
+            android:gravity="center"
+            android:text="Preview"
+            android:textColor="#FFF"
+            android:textSize="16sp"
+            android:textStyle="bold|normal" />
+
+    </LinearLayout>
+
+</RelativeLayout>

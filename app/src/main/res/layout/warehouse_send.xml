@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true">
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Warehouse Send"
+            android:textAlignment="center"
+            android:textColor="@color/basic_title"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/Date1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/basic_height"
+                android:layout_marginLeft="@dimen/spinner_margin_l"
+                android:layout_marginRight="@dimen/spinner_margin_l"
+                android:layout_marginBottom="@dimen/basic_MarginBottom"
+                android:background="@drawable/textbox_design"
+                android:clickable="true"
+                android:focusable="false"
+                android:gravity="center"
+                android:hint="Date" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spinner_margin_l"
+                android:layout_marginRight="@dimen/spinner_margin_l"
+                android:layout_marginBottom="@dimen/basic_MarginBottom"
+                android:orientation="horizontal"
+                android:weightSum="6">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/basic_height"
+                    android:layout_weight="4"
+                    android:text="Model"
+                    android:gravity=""
+                    android:textSize="@dimen/basic_font"
+                    android:textStyle="normal|bold" />
+
+                <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                    android:id="@+id/spModel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/basic_height"
+                    android:background="@drawable/spinner_bg"
+                    android:layout_weight="2" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spinner_margin_l"
+                android:layout_marginRight="@dimen/spinner_margin_l"
+                android:layout_marginBottom="@dimen/basic_MarginBottom"
+                android:orientation="horizontal"
+                android:weightSum="6">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/basic_height"
+                    android:layout_weight="4"
+                    android:text="Metter"
+                    android:gravity=""
+                    android:textSize="@dimen/basic_font"
+                    android:textStyle="normal|bold" />
+
+                <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                    android:id="@+id/spMetter"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/basic_height"
+                    android:background="@drawable/spinner_bg"
+                    android:layout_weight="2" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spinner_margin_l"
+                android:layout_marginRight="@dimen/spinner_margin_l"
+                android:layout_marginBottom="@dimen/basic_MarginBottom"
+                android:orientation="horizontal"
+                android:weightSum="6">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/basic_height"
+                    android:layout_weight="4"
+                    android:text="Pin"
+                    android:gravity=""
+                    android:textSize="@dimen/basic_font"
+                    android:textStyle="normal|bold" />
+
+                <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                    android:id="@+id/spPin"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/basic_height"
+                    android:background="@drawable/spinner_bg"
+                    android:layout_weight="2" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spinner_margin_l"
+                android:layout_marginRight="@dimen/spinner_margin_l"
+                android:layout_marginBottom="@dimen/basic_MarginBottom"
+                android:orientation="horizontal"
+                android:weightSum="6">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/basic_height"
+                    android:layout_weight="4"
+                    android:text="Product"
+                    android:gravity=""
+                    android:textSize="@dimen/basic_font"
+                    android:textStyle="normal|bold" />
+
+                <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                    android:id="@+id/spProduct"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/basic_height"
+                    android:background="@drawable/spinner_bg"
+                    android:layout_weight="2" />
+                <Spinner
+                    android:visibility="gone"
+                    android:id="@+id/spProduct2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/basic_height"
+                    android:background="@drawable/spinner_bg"
+                    android:layout_weight="2">
+
+                </Spinner>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spinner_margin_l"
+                android:layout_marginRight="@dimen/spinner_margin_l"
+                android:layout_marginBottom="@dimen/basic_MarginBottom"
+                android:orientation="horizontal"
+                android:weightSum="6">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/basic_height"
+                    android:layout_weight="4"
+                    android:text="Send From"
+                    android:gravity=""
+                    android:textSize="@dimen/basic_font"
+                    android:textStyle="normal|bold" />
+                <Spinner
+                    android:id="@+id/spWsend"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/basic_height"
+                    android:background="@drawable/spinner_bg"
+                    android:layout_weight="2">
+
+                </Spinner>
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <TextView
+                android:layout_width="@dimen/label_width"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="2"
+                android:text="Stock"
+                android:textSize="@dimen/basic_font"
+                android:textStyle="normal|bold" />
+
+            <EditText
+                android:id="@+id/txtStock"
+                android:layout_width="@dimen/textbox_height"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="4"
+                android:enabled="false"
+                android:background="@drawable/textbox_design"
+                android:textColor="#000"
+                android:inputType="numberDecimal"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="@dimen/label_width"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="2"
+                android:text="Cost Price"
+                android:textSize="@dimen/basic_font"
+                android:textStyle="normal|bold" />
+
+            <EditText
+                android:id="@+id/txtHPrice1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"/>
+
+            <EditText
+                android:id="@+id/txtPrice"
+                android:enabled="true"
+                android:layout_width="@dimen/textbox_height"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="4"
+                android:inputType="numberDecimal"
+                android:background="@drawable/textbox_design"
+                android:textColor="#000"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <TextView
+                android:layout_width="@dimen/label_width"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="2.8"
+                android:text="Quantity"
+                android:textSize="@dimen/basic_font"
+                android:textStyle="normal|bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="4"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <Button
+                    android:id="@+id/btnRemove"
+                    android:layout_width="47dp"
+                    android:background="@drawable/ic_remove_black_24dp"
+                    android:layout_height="@dimen/basic_height"
+                    android:layout_weight=".1" />
+
+                <EditText
+                    android:id="@+id/txtQuantity"
+                    android:layout_width="@dimen/textbox_height"
+                    android:layout_height="@dimen/basic_height"
+                    android:layout_weight="3"
+                    android:text="1"
+                    android:background="@drawable/textbox_design"
+                    android:gravity="center" />
+                <Button
+                    android:id="@+id/btnAddQ"
+                    android:layout_width="47dp"
+                    android:background="@drawable/ic_add_black_24dp"
+                    android:layout_height="@dimen/basic_height"
+                    android:layout_weight=".1" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:orientation="horizontal"
+            android:weightSum="6">
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="4"
+                android:text="Receive To"
+                android:gravity=""
+                android:textSize="@dimen/basic_font"
+                android:textStyle="normal|bold" />
+            <Spinner
+                android:id="@+id/spWreceive"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/basic_height"
+                android:background="@drawable/spinner_bg"
+                android:layout_weight="2">
+
+            </Spinner>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:weightSum="2.5">
+
+            <Button
+                android:id="@+id/btnReset"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:textColor="@color/basic_title"
+                android:background="@drawable/textbox_design"
+                android:text="Reset"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"/>
+            <Button
+                android:id="@+id/btnAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:background="@drawable/textbox_design"
+                android:textColor="@color/basic_title"
+                android:text="Add"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:weightSum="2.1">
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:background="@drawable/cancel_button"
+                android:textColor="@color/white"
+                android:text="@string/cancel"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"/>
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:background="@drawable/single_btn"
+                android:text="@string/save"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:background="@color/basic_title"
+            android:weightSum="4">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="@string/Product"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:text="Cost Price"
+                android:textAlignment="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:text="@string/Quantity"
+                android:textAlignment="center"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <ListView
+                android:layout_marginBottom="10dp"
+                android:id="@android:id/list"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:divider="@color/basic_title"
+                android:dividerHeight="1dp"
+                android:fastScrollEnabled="false" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+</android.support.v4.widget.NestedScrollView>

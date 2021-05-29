@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Payment_Received"
+            android:textAlignment="center"
+            android:textColor="@color/basic_title"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+        <!--<view-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="2dp"-->
+            <!--android:layout_marginLeft="5dp"-->
+            <!--android:layout_marginRight="5dp"-->
+            <!--android:layout_marginBottom="5dp"-->
+            <!--android:background="@color/white"-->
+            <!--/>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <RadioGroup
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="6">
+                <RadioButton
+                    android:checked="true"
+                    android:id="@+id/rbCustomer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:textSize="@dimen/basic_font"
+                    android:textColor="#000"
+                    android:text="Customer" />
+                <RadioButton
+                    android:id="@+id/rbSupplier"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:textSize="@dimen/basic_font"
+                    android:textColor="#000"
+                    android:text="Supplier" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/customer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="4"
+                android:gravity=""
+                android:text="Customer"
+                android:textSize="@dimen/basic_font"
+                android:textStyle="normal|bold" />
+
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/spCustomerName"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/basic_height"
+                android:background="@drawable/spinner_bg"
+                android:textColor="#000"
+                android:layout_weight="2" />
+            <Spinner
+                android:visibility="gone"
+                android:id="@+id/spCustomerName11"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/basic_height"
+                android:background="@drawable/spinner_bg"
+                android:textColor="#000"
+                android:layout_weight="2">
+
+            </Spinner>
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/supplier"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:orientation="horizontal"
+            android:weightSum="6">
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="4"
+                android:text="Supplier"
+                android:gravity=""
+                android:textSize="@dimen/basic_font"
+                android:textStyle="normal|bold" />
+
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/spSupplierName"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/basic_height"
+                android:background="@drawable/spinner_bg"
+                android:textColor="#000"
+                android:layout_weight="2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <Spinner
+                android:visibility="gone"
+                android:id="@+id/spCustomerName1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/basic_height"
+                android:layout_marginLeft="@dimen/spinner_margin_l"
+                android:layout_marginRight="@dimen/spinner_margin_l"
+                android:layout_marginBottom="@dimen/basic_MarginBottom"
+                android:background="@drawable/spinner_bg"
+                android:textSize="@dimen/basic_font" />
+
+            <EditText
+                android:id="@+id/txtCusAddress"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/basic_height"
+                android:layout_marginLeft="@dimen/spinner_margin_l"
+                android:layout_marginRight="@dimen/spinner_margin_l"
+                android:layout_marginBottom="@dimen/basic_MarginBottom"
+                android:background="@drawable/textbox_design"
+                android:enabled="false"
+                android:gravity="center"
+                android:hint="@string/CusAddress"
+                android:textSize="@dimen/basic_font"
+                android:textStyle="normal|bold" />
+
+        </LinearLayout>
+
+        <!--.................................................Previous Due Amount.....................................        -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <TextView
+                android:layout_width="@dimen/label_width"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="2"
+                android:text="@string/Due"
+                android:textSize="@dimen/basic_font"
+                android:textStyle="normal|bold" />
+
+            <EditText
+                android:id="@+id/txtPreviousDue"
+                android:layout_width="@dimen/textbox_height"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="4"
+                android:enabled="false"
+                android:background="@drawable/textbox_design"
+                android:textColor="#000"
+                android:gravity="center" />
+        </LinearLayout>
+        <!--.................................................Less Amount.....................................        -->
+        <LinearLayout
+            android:id="@+id/less"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <TextView
+                android:layout_width="@dimen/label_width"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="2"
+                android:text="Less"
+                android:textSize="@dimen/basic_font"
+                android:textStyle="normal|bold" />
+
+            <EditText
+                android:id="@+id/txtLess"
+                android:layout_width="@dimen/textbox_height"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="4"
+                android:enabled="true"
+                android:inputType="numberDecimal"
+                android:background="@drawable/textbox_design"
+                android:textColor="#000"
+                android:gravity="center" />
+        </LinearLayout>
+        <!--.................................................Payable Amount.....................................        -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:orientation="horizontal"
+            android:weightSum="6">
+            <TextView
+                android:layout_width="@dimen/label_width"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="2"
+                android:text="Payable"
+                android:textSize="@dimen/basic_font"
+                android:textStyle="normal|bold" />
+
+            <EditText
+                android:id="@+id/txtPayable"
+                android:enabled="false"
+                android:layout_width="@dimen/textbox_height"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="4"
+                android:background="@drawable/textbox_design"
+                android:gravity="center" />
+        </LinearLayout>
+        <!--.................................................Paid Amount.....................................        -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <TextView
+                android:layout_width="@dimen/label_width"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="2"
+                android:text="Paid Amount"
+                android:textSize="@dimen/basic_font"
+                android:textStyle="normal|bold" />
+
+            <EditText
+                android:id="@+id/txtPaidAmount"
+                android:layout_width="@dimen/textbox_height"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="4"
+                android:inputType="numberDecimal"
+                android:background="@drawable/textbox_design"
+                android:gravity="center" />
+        </LinearLayout>
+        <!--.................................................Due Amount.....................................       -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <TextView
+                android:layout_width="@dimen/label_width"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="2"
+                android:text="Due Amount"
+                android:textSize="@dimen/basic_font"
+                android:textStyle="normal|bold" />
+
+            <EditText
+                android:id="@+id/txtDueAmount"
+                android:enabled="false"
+                android:layout_width="@dimen/textbox_height"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="4"
+                android:background="@drawable/textbox_design"
+                android:gravity="center" />
+        </LinearLayout>
+
+
+
+        <!---...........Pay Type Bank,Brance,CheqeNo,MaturituDate............-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:orientation="horizontal"
+            android:weightSum="6">
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="4"
+                android:text="Pay Type"
+                android:gravity=""
+                android:textSize="@dimen/basic_font"
+                android:textStyle="normal|bold" />
+            <Spinner
+                android:id="@+id/spPaymentType"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/basic_height"
+                android:background="@drawable/spinner_bg"
+                android:layout_weight="2">
+
+            </Spinner>
+        </LinearLayout>
+        <EditText
+            android:visibility="gone"
+            android:id="@+id/txtCheque"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/basic_height"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:background="@drawable/textbox_design"
+            android:gravity="center"
+            android:hint="@string/ChequeNo"
+            android:textColor="#000"
+            android:textSize="@dimen/basic_font"
+            android:textStyle="normal|bold" />
+
+        <Spinner
+            android:visibility="gone"
+            android:id="@+id/spAccountNo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/basic_height"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:background="@drawable/spinner_bg"
+            android:textSize="@dimen/basic_font"/>
+
+        <Spinner
+            android:visibility="gone"
+            android:id="@+id/spBank"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/basic_height"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:background="@drawable/spinner_bg"
+            android:textSize="@dimen/basic_font"/>
+        <Spinner
+            android:visibility="gone"
+            android:id="@+id/spBrance"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/basic_height"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:background="@drawable/spinner_bg"
+            android:textSize="@dimen/basic_font"/>
+
+        <Spinner
+            android:visibility="gone"
+            android:id="@+id/spAccHead"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/basic_height"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:background="@drawable/spinner_bg"
+            android:textSize="@dimen/basic_font"/>
+
+        <EditText
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/basic_height"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:background="@drawable/textbox_design"
+            android:id="@+id/txtMDate"
+            android:clickable="true"
+            android:focusable="false"
+            android:gravity="center"
+            android:hint="Maturity Date"/>
+        <!---...........End Pay Type Bank,Brance,CheqeNo,MaturituDate.........-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="@dimen/spinner_margin_l"
+                    android:layout_marginRight="@dimen/spinner_margin_l"
+                    android:layout_marginBottom="@dimen/basic_MarginBottom"
+                    android:weightSum="2.1">
+                    <Button
+                        android:id="@+id/btnCancel"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+                        android:background="@drawable/cancel_button"
+                        android:textColor="@color/white"
+                        android:text="@string/cancel"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"/>
+
+                    <Button
+                        android:id="@+id/btnSave"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:background="@drawable/single_btn"
+                        android:text="@string/save"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>

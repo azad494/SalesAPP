@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/GeneralLedger"
+            android:textAlignment="center"
+            android:textColor="@color/basic_title"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+        <!--<view-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="2dp"-->
+            <!--android:layout_marginLeft="5dp"-->
+            <!--android:layout_marginRight="5dp"-->
+            <!--android:layout_marginBottom="5dp"-->
+            <!--android:background="@color/white"-->
+            <!--/>-->
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <RadioGroup
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="6">
+                <RadioButton
+                    android:checked="true"
+                    android:id="@+id/rbDebit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:textSize="@dimen/basic_font"
+                    android:textColor="#000"
+                    android:text="Debit" />
+                <RadioButton
+                    android:id="@+id/rbCredit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:textSize="@dimen/basic_font"
+                    android:textColor="#000"
+                    android:text="Credit" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/accountType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="4"
+                android:gravity=""
+                android:text="Account Type"
+                android:textSize="@dimen/basic_font"
+                android:textStyle="normal|bold" />
+            <Spinner
+                android:id="@+id/spAccountType"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/basic_height"
+                android:background="@drawable/spinner_bg"
+                android:textColor="#000"
+                android:layout_weight="2">
+
+            </Spinner>
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/AccountGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="4"
+                android:gravity=""
+                android:text="Account Group"
+                android:textSize="@dimen/basic_font"
+                android:textStyle="normal|bold" />
+            <Spinner
+                android:id="@+id/spAccountGroup"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/basic_height"
+                android:background="@drawable/spinner_bg"
+                android:textColor="#000"
+                android:layout_weight="2">
+
+            </Spinner>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/AccountHead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="4"
+                android:gravity=""
+                android:text="Expense Head"
+                android:textSize="@dimen/basic_font"
+                android:textStyle="normal|bold" />
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/spAccountHead"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/basic_height"
+                android:background="@drawable/spinner_bg"
+                android:textColor="#000"
+                android:layout_weight="2" />
+            <Spinner
+                android:visibility="gone"
+                android:id="@+id/spAccountHead1"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/basic_height"
+                android:background="@drawable/spinner_bg"
+                android:textColor="#000"
+                android:layout_weight="2">
+
+            </Spinner>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+
+
+            <EditText
+                android:id="@+id/txtAmount"
+                android:layout_width="match_parent"
+                android:layout_weight="6"
+                android:layout_height="@dimen/basic_height"
+                android:layout_marginBottom="@dimen/basic_MarginBottom"
+                android:background="@drawable/textbox_design"
+                android:gravity="center"
+                android:hint="Amount"
+                android:inputType="numberDecimal"
+                android:textSize="@dimen/basic_font"
+                android:textStyle="normal|bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+
+
+            <EditText
+                android:id="@+id/txtDescription"
+                android:layout_width="match_parent"
+                android:layout_weight="6"
+                android:layout_height="@dimen/basic_height"
+                android:layout_marginBottom="@dimen/basic_MarginBottom"
+                android:background="@drawable/textbox_design"
+                android:gravity="center"
+                android:hint="Notes"
+                android:textSize="@dimen/basic_font"
+                android:textStyle="normal|bold" />
+
+
+        </LinearLayout>
+
+
+
+
+        <!---...........Pay Type Bank,Brance,CheqeNo,MaturituDate............-->
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:orientation="horizontal"
+            android:weightSum="6">
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="4"
+                android:text="Pay Type"
+                android:gravity=""
+                android:textSize="@dimen/basic_font"
+                android:textStyle="normal|bold" />
+            <Spinner
+                android:id="@+id/spPaymentType"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/basic_height"
+                android:background="@drawable/spinner_bg"
+                android:layout_weight="2">
+
+            </Spinner>
+        </LinearLayout>
+        <EditText
+            android:visibility="gone"
+            android:id="@+id/txtCheque"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/basic_height"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:background="@drawable/textbox_design"
+            android:gravity="center"
+            android:hint="@string/ChequeNo"
+            android:textColor="#000"
+            android:textSize="@dimen/basic_font"
+            android:textStyle="normal|bold" />
+        <Spinner
+            android:visibility="gone"
+            android:id="@+id/spBank"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/basic_height"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:background="@drawable/spinner_bg"
+            android:textSize="@dimen/basic_font"/>
+        <Spinner
+            android:visibility="gone"
+            android:id="@+id/spBrance"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/basic_height"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:background="@drawable/spinner_bg"
+            android:textSize="@dimen/basic_font"/>
+        <EditText
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/basic_height"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:background="@drawable/textbox_design"
+            android:id="@+id/txtMDate"
+            android:clickable="true"
+            android:focusable="false"
+            android:gravity="center"
+            android:hint="Maturity Date"/>
+        <!---...........End Pay Type Bank,Brance,CheqeNo,MaturituDate.........-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="@dimen/spinner_margin_l"
+                    android:layout_marginRight="@dimen/spinner_margin_l"
+                    android:layout_marginBottom="@dimen/basic_MarginBottom"
+                    android:weightSum="2.1">
+                    <Button
+                        android:id="@+id/btnCancel"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+                        android:background="@drawable/cancel_button"
+                        android:textColor="@color/white"
+                        android:text="@string/cancel"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"/>
+
+                    <Button
+                        android:id="@+id/btnSave"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:background="@drawable/single_btn"
+                        android:text="@string/save"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+ </ScrollView>

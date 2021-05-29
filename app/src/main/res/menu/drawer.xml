@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/group1">
+        <item
+            android:id="@+id/home"
+            android:checked="false"
+            android:icon="@drawable/ic_home_black"
+            android:title="@string/home" />
+        <item
+            android:id="@+id/Customer"
+            android:checked="false"
+            android:icon="@drawable/ic_home_black"
+            android:title="New Customer" />
+    </group>
+    <group
+        android:id="@+id/group2"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/Sales"
+            android:enabled="true"
+            android:checked="false"
+            android:icon="@drawable/ic_local_grocery_store_black"
+            android:title="@string/a1" />
+        <item
+            android:id="@+id/SalesReturn"
+            android:enabled="true"
+            android:checked="false"
+            android:icon="@drawable/ic_local_grocery_store_black"
+            android:title="@string/a7" />
+
+        <item
+            android:id="@+id/Purchase"
+            android:checked="false"
+            android:icon="@drawable/ic_child_friendly_black"
+            android:title="@string/a3" />
+
+        <item
+        android:id="@+id/PaymentReceived"
+        android:checked="false"
+        android:icon="@drawable/ic_payment_black_24dp"
+        android:title="@string/a4" />
+
+        <item
+            android:id="@+id/Order"
+            android:checked="false"
+            android:icon="@drawable/ic_local_grocery_store_black_24dp"
+            android:title="@string/a5" />
+
+        <item
+            android:id="@+id/Delivery"
+            android:checked="false"
+            android:icon="@drawable/ic_child_friendly_black"
+            android:title="@string/a6" />
+
+        <item
+            android:id="@+id/GemeralLedger"
+            android:visible="true"
+            android:checked="false"
+            android:icon="@drawable/general_ledger"
+            android:title="@string/GeneralLedger" />
+
+        <item
+            android:id="@+id/canvas"
+            android:checked="false"
+            android:visible="false"
+            android:icon="@drawable/general_ledger"
+            android:title="Canvas" />
+
+
+    </group>
+    <group
+        android:id="@+id/group4"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/item3"
+            android:title="Warehouse">
+            <menu>
+                <item
+                    android:id="@+id/Wsend"
+                    android:icon="@drawable/ic_local_grocery_store_black"
+                    android:title="Warehouse Out" />
+
+                <item
+                    android:id="@+id/Wreceive"
+                    android:icon="@drawable/ic_child_friendly_black"
+                    android:title="Warehouse In" />
+            </menu>
+        </item>
+
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/group5">
+        <item
+            android:id="@+id/Report"
+            android:checked="false"
+            android:icon="@drawable/report_black_24dp"
+            android:title="@string/report" />
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/group3">
+        <item
+            android:id="@+id/Logout"
+            android:checked="false"
+            android:icon="@drawable/ic_settings_power_black"
+            android:title="@string/a2" />
+    </group>
+
+    <!--<item-->
+        <!--android:id="@+id/withsubmenu"-->
+        <!--android:title="Menu-Title">-->
+        <!--<menu>-->
+            <!--<item-->
+                <!--android:id="@+id/Logout"-->
+                <!--android:checked="false"-->
+                <!--android:icon="@drawable/ic_settings_power_black"-->
+                <!--android:title="@string/a2" />-->
+        <!--</menu>-->
+
+    <!--</item>-->
+
+
+
+</menu>
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+    <!--<menu xmlns:android="http://schemas.android.com/apk/res/android">-->
+
+    <!--<group android:checkableBehavior="single">-->
+    <!--<item-->
+    <!--android:id="@+id/home"-->
+    <!--android:checked="false"-->
+    <!--android:icon="@drawable/ic_inbox_black"-->
+    <!--android:title="@string/home" />-->
+
+    <!--<item-->
+    <!--android:id="@+id/a1"-->
+    <!--android:checked="false"-->
+    <!--android:icon="@drawable/ic_inbox_black"-->
+    <!--android:title="@string/a1" />-->
+
+    <!--<item-->
+    <!--android:id="@+id/a2"-->
+    <!--android:checked="false"-->
+    <!--android:icon="@drawable/ic_star_black"-->
+    <!--android:title="@string/a2" />-->
+
+    <!--<item-->
+    <!--android:id="@+id/a3"-->
+    <!--android:checked="false"-->
+    <!--android:icon="@drawable/ic_send_black"-->
+    <!--android:title="@string/a3" />-->
+
+    <!--<item-->
+    <!--android:id="@+id/a4"-->
+    <!--android:checked="false"-->
+    <!--android:icon="@drawable/ic_drafts_black"-->
+    <!--android:title="@string/a4" />-->
+
+
+    <!--<item-->
+    <!--android:id="@+id/a5"-->
+    <!--android:checked="false"-->
+    <!--android:icon="@drawable/ic_email_black"-->
+    <!--android:title="@string/a5" />-->
+
+    <!--<item-->
+    <!--android:id="@+id/a6"-->
+    <!--android:checked="false"-->
+    <!--android:icon="@drawable/ic_delete_black"-->
+    <!--android:title="@string/a6" />-->
+
+    <!--<item-->
+    <!--android:id="@+id/a7"-->
+    <!--android:checked="false"-->
+    <!--android:icon="@drawable/ic_error_black"-->
+    <!--android:title="@string/a7" />-->
+
+    <!--<item-->
+    <!--android:id="@+id/a8"-->
+    <!--android:checked="false"-->
+    <!--android:icon="@drawable/ic_error_black"-->
+    <!--android:title="@string/a8" />-->
+
+    <!--<item-->
+    <!--android:id="@+id/a9"-->
+    <!--android:checked="false"-->
+    <!--android:icon="@drawable/ic_error_black"-->
+    <!--android:title="@string/a9" />-->
+
+    <!--<item-->
+    <!--android:id="@+id/a10"-->
+    <!--android:checked="false"-->
+    <!--android:icon="@drawable/ic_error_black"-->
+    <!--android:title="@string/a10" />-->
+
+    <!--<item-->
+    <!--android:id="@+id/a11"-->
+    <!--android:checked="false"-->
+    <!--android:icon="@drawable/ic_error_black"-->
+    <!--android:title="@string/a11" />-->
+
+    <!--<item-->
+    <!--android:id="@+id/a12"-->
+    <!--android:checked="false"-->
+    <!--android:icon="@drawable/ic_error_black"-->
+    <!--android:title="@string/a12" />-->
+
+    <!--<item-->
+    <!--android:id="@+id/a13"-->
+    <!--android:checked="false"-->
+    <!--android:icon="@drawable/ic_error_black"-->
+    <!--android:title="@string/a13" />-->
+
+    <!--<item-->
+    <!--android:id="@+id/a14"-->
+    <!--android:checked="false"-->
+    <!--android:icon="@drawable/ic_error_black"-->
+    <!--android:title="@string/a14" />-->
+
+    <!--<item-->
+    <!--android:id="@+id/a15"-->
+    <!--android:checked="false"-->
+    <!--android:icon="@drawable/ic_error_black"-->
+    <!--android:title="@string/a15" />-->
+
+    <!--<item-->
+    <!--android:id="@+id/a16"-->
+    <!--android:checked="false"-->
+    <!--android:icon="@drawable/ic_error_black"-->
+    <!--android:title="@string/a16" />-->
+
+    <!--<item-->
+    <!--android:id="@+id/a17"-->
+    <!--android:checked="false"-->
+    <!--android:icon="@drawable/ic_error_black"-->
+    <!--android:title="@string/a17" />-->
+
+    <!--<item-->
+    <!--android:id="@+id/a18"-->
+    <!--android:checked="false"-->
+    <!--android:icon="@drawable/ic_error_black"-->
+    <!--android:title="@string/a18" />-->
+
+    <!--<item-->
+    <!--android:id="@+id/a19"-->
+    <!--android:checked="false"-->
+    <!--android:icon="@drawable/ic_error_black"-->
+    <!--android:title="@string/a19" />-->
+
+    <!--<item-->
+    <!--android:id="@+id/a20"-->
+    <!--android:checked="false"-->
+    <!--android:icon="@drawable/ic_error_black"-->
+    <!--android:title="@string/a20" />-->
+
+    <!--<item-->
+    <!--android:id="@+id/a21"-->
+    <!--android:checked="false"-->
+    <!--android:icon="@drawable/ic_error_black"-->
+    <!--android:title="@string/a21" />-->
+
+    <!--<item-->
+    <!--android:id="@+id/a22"-->
+    <!--android:checked="false"-->
+    <!--android:icon="@drawable/ic_error_black"-->
+    <!--android:title="@string/a22" />-->
+
+    <!--<item-->
+    <!--android:id="@+id/a23"-->
+    <!--android:checked="false"-->
+    <!--android:icon="@drawable/ic_error_black"-->
+    <!--android:title="@string/a23" />-->
+
+    <!--</group>-->
+    <!--</menu>-->

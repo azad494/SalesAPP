@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:weightSum="6">
+
+        <TextView
+            android:id="@+id/txtSLID"
+            android:layout_height="wrap_content"
+            android:layout_width="@dimen/label_width"
+            android:textAlignment="center"
+            android:layout_weight="2"
+            android:textColor="@color/Black"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/txtDate"
+            android:layout_height="wrap_content"
+            android:layout_width="@dimen/label_width"
+            android:textAlignment="center"
+            android:layout_weight="2"
+            android:textColor="@color/Black"/>
+        <TextView
+            android:id="@+id/txtSend"
+            android:layout_height="wrap_content"
+            android:layout_width="@dimen/label_width"
+            android:textAlignment="center"
+            android:layout_weight="2"
+            android:textColor="@color/Black"
+            android:textStyle="normal|bold" />
+        <TextView
+            android:id="@+id/txtReceive"
+            android:layout_height="wrap_content"
+            android:layout_width="@dimen/label_width"
+            android:textAlignment="center"
+            android:layout_weight="2"
+            android:textColor="@color/Black"
+            android:visibility="visible"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="4">
+        <TextView
+            android:id="@+id/txtDate1"
+            android:layout_height="wrap_content"
+            android:layout_width="@dimen/label_width"
+            android:textAlignment="center"
+            android:layout_weight="2"
+            android:textColor="@color/Black"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/txtPrice"
+            android:layout_width="@dimen/label_width"
+            android:textColor="@color/Black"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:textStyle="normal|bold"/>
+
+        <TextView
+            android:id="@+id/txtQty"
+            android:layout_width="@dimen/label_width"
+            android:textColor="@color/Black"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:textStyle="normal|bold"/>
+
+    </LinearLayout>
+</LinearLayout>

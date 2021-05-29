@@ -1,0 +1,116 @@
+package peash.esales.Fragment;
+
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.Path;
+import android.media.MediaScannerConnection;
+import android.net.Uri;
+import android.os.Bundle;
+import android.os.Environment;
+import android.os.Handler;
+import android.support.annotation.Nullable;
+import android.support.design.widget.TabItem;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
+import android.util.AttributeSet;
+import android.view.LayoutInflater;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.Toast;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+
+import peash.esales.Activity.PageAdapter;
+import peash.esales.App.AppController;
+import peash.esales.CustomView.DrawLineCanvas;
+import peash.esales.R;
+
+
+public class Canvas_Fragment extends Fragment {
+
+    private DrawLineCanvas dlc;
+    Button btnSaveImage;
+    Bitmap b;
+    private Canvas c;
+    private Paint pLine, pBg;
+    private Path touchPath;
+
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
+        View v = inflater.inflate(R.layout.fragment_canvas, container, false);
+
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayShowHomeEnabled(true);
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setHomeButtonEnabled(true);
+
+        btnSaveImage = v.findViewById(R.id.btn_save_image);
+        final ImageView iv = v.findViewById(R.id.iv);
+        dlc = v.findViewById(R.id.dlc);
+
+        btnSaveImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                v=dlc;
+                v.setDrawingCacheEnabled(true);
+                v.setDrawingCacheQuality(View.DRAWING_CACHE_QUALITY_HIGH);
+                //Bitmap bitmap = v.getDrawingCache();
+                Bitmap bitmap = Bitmap.createBitmap(500/*width*/, 500/*height*/, Bitmap.Config.ARGB_8888);
+                Canvas canvas = new Canvas(bitmap);
+                v.draw(canvas);
+                b = bitmap;     //for saving "b" to the sdcard
+                iv.setImageBitmap(bitmap);
+
+                final File dir = new File(Environment.getExternalStorageDirectory() + File.separator + getResources().getString(R.string.app_name));
+                if (!dir.exists()) {
+                    dir.mkdirs();
+                }
+
+                File output = new File(dir, "canvasdemo.jpg");
+                OutputStream os;
+
+                try {
+                    os = new FileOutputStream(output);
+                    b.compress(Bitmap.CompressFormat.JPEG, 100, os);
+                    os.flush();
+                    os.close();
+
+                    final Handler handler = new Handler();
+
+                    //this code will scan the image so that it will appear in your gallery when you open next time
+                    MediaScannerConnection.scanFile(AppController.getContext(), new String[]{output.toString()}, null,
+                            new MediaScannerConnection.OnScanCompletedListener() {
+                                public void onScanCompleted(String path, Uri uri) {
+                                    handler.post(new Runnable() {
+                                        @Override
+                                        public void run() {
+                                            Toast.makeText(AppController.getContext(), "image saved", Toast.LENGTH_SHORT).show();
+                                            //Toast.makeText(Canvas_Fragment.this, AppController.getContext().this.getResources().getString(R.string.str_save_image_text) + dir.getPath(), Toast.LENGTH_LONG).show();
+                                        }
+                                    });
+                                }
+                            }
+                    );
+                } catch (FileNotFoundException fnfe) {
+                    fnfe.printStackTrace();
+                } catch (IOException ioe) {
+                    ioe.printStackTrace();
+                }
+            }
+        });
+        return v;
+    }
+}

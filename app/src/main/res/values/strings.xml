@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">Many</string>
+    <string name="app_name1">eSales</string>
+    <string name="home">Home</string>
+    <string name="a1">Sales</string>
+    <string name="a2">Logout</string>
+    <string name="a7">Sales Return</string>
+    <string name="report">Report</string>
+    <string name="action_settings">Settings</string>
+    <string name="openDrawer">Navigation View Closed</string>
+    <string name="closeDrawer">Navigation View</string>
+    <string name="a3">Purchase</string>
+    <string name="a4">Payment Received</string>
+    <string name="a5">Order</string>
+    <string name="a6">Delivery</string>
+    <string name="test">Test</string>
+    <string name="P_Title">PURCHASE</string>
+    <string name="Mobile">Mobile</string>
+    <string name="Due">Previous Due</string>
+    <string name="Invoice">Invoice</string>
+    <string name="ChequeNo">Cheque No.</string>
+    <string name="Product">Product</string>
+    <string name="Cost">Price</string>
+    <string name="Quantity">Quantity</string>
+    <string name="Total">Total</string>
+    <string name="Code">Code</string>
+    <string name="Sales_Title">SALES</string>
+    <string name="Sales_return">SALES RETURN</string>
+    <string name="Customer">Customer Information</string>
+    <string name="Order">NEW ORDER</string>
+    <string name="Payment_Received">Payment Received</string>
+    <string name="GeneralLedger">Expense</string>
+    <string name="change">Change</string>
+    <string name="paid">Paid</string>
+    <string name="total_amount">Total Amount</string>
+    <string name="clear">Clear</string>
+    <string name="add_to_card">Add to Card</string>
+    <string name="stock">Stock</string>
+    <string name="discount">Disc%</string>
+    <string name="price">Price</string>
+    <string name="product_code">Product Code</string>
+    <string name="customer_name">Customer Name</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="save">SAVE</string>
+    <string name="fragment_login_password_hint">forget</string>
+    <string name="description">Description</string>
+    <string name="password">Password</string>
+
+
+    <string name="CusAddress">Address</string>
+    <string name="str_save_image_text">Your images has been saved in gallery at </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

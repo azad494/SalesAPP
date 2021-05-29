@@ -1,0 +1,1018 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipe_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true">
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Sales_Title"
+            android:textAlignment="center"
+            android:textColor="@color/basic_title"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:orientation="horizontal"
+            android:weightSum="6">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="1"
+                android:text="Customer"
+                android:gravity=""
+                android:textSize="@dimen/basic_font"
+                android:textStyle="normal|bold" />
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/spCustomerName"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/basic_height"
+                android:background="@drawable/spinner_bg"
+                android:textColor="#000"
+                android:layout_weight="4.9" />
+
+            <Button
+                android:id="@+id/btnNew"
+                android:layout_width="47dp"
+                android:background="@drawable/ic_person_add_black_24dp"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight=".1" />
+            <!--<ImageView-->
+                <!--android:id="@+id/IVcanCus"-->
+                <!--android:visibility="gone"-->
+                <!--android:layout_width="15dp"-->
+                <!--android:layout_height="@dimen/basic_height"-->
+                <!--android:layout_weight=".5"-->
+                <!--android:src="@drawable/cancle"/>-->
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <Spinner
+                android:visibility="gone"
+                android:id="@+id/spCustomerName1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/basic_height"
+                android:layout_marginLeft="@dimen/spinner_margin_l"
+                android:layout_marginRight="@dimen/spinner_margin_l"
+                android:layout_marginBottom="@dimen/basic_MarginBottom"
+                android:background="@drawable/spinner_bg"
+                android:textSize="@dimen/basic_font" />
+
+            <EditText
+                android:id="@+id/txtNewCus"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/basic_height"
+                android:layout_marginLeft="@dimen/spinner_margin_l"
+                android:layout_marginRight="@dimen/spinner_margin_l"
+                android:layout_marginBottom="@dimen/basic_MarginBottom"
+                android:background="@drawable/textbox_design"
+                android:gravity="center"
+                android:hint="@string/customer_name"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:textSize="@dimen/basic_font"
+                android:textStyle="normal|bold" />
+
+            <EditText
+                android:id="@+id/txtMobile"
+                android:enabled="false"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/basic_height"
+                android:layout_marginLeft="@dimen/spinner_margin_l"
+                android:layout_marginRight="@dimen/spinner_margin_l"
+                android:layout_marginBottom="@dimen/basic_MarginBottom"
+                android:background="@drawable/textbox_design"
+                android:gravity="center"
+                android:hint="@string/Mobile"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:textSize="@dimen/basic_font"
+                android:textStyle="normal|bold" />
+
+            <EditText
+                android:id="@+id/txtCusAddress"
+                android:enabled="false"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/basic_height"
+                android:layout_marginLeft="@dimen/spinner_margin_l"
+                android:layout_marginRight="@dimen/spinner_margin_l"
+                android:layout_marginBottom="@dimen/basic_MarginBottom"
+                android:background="@drawable/textbox_design"
+                android:gravity="center"
+                android:hint="@string/CusAddress"
+                android:textSize="@dimen/basic_font"
+                android:textStyle="normal|bold" />
+
+            <EditText
+                android:id="@+id/Date1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/basic_height"
+                android:layout_marginLeft="@dimen/spinner_margin_l"
+                android:layout_marginRight="@dimen/spinner_margin_l"
+                android:layout_marginBottom="@dimen/basic_MarginBottom"
+                android:background="@drawable/textbox_design"
+                android:clickable="true"
+                android:enabled="false"
+                android:focusable="false"
+                android:gravity="center"
+                android:hint="Date" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spinner_margin_l"
+                android:layout_marginRight="@dimen/spinner_margin_l"
+                android:layout_marginBottom="@dimen/basic_MarginBottom"
+                android:orientation="horizontal"
+                android:weightSum="6">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/basic_height"
+                    android:layout_weight="4"
+                    android:text="Model"
+                    android:gravity=""
+                    android:textSize="@dimen/basic_font"
+                    android:textStyle="normal|bold" />
+
+                <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                    android:id="@+id/spModel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/basic_height"
+                    android:background="@drawable/spinner_bg"
+                    android:layout_weight="2" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spinner_margin_l"
+                android:layout_marginRight="@dimen/spinner_margin_l"
+                android:layout_marginBottom="@dimen/basic_MarginBottom"
+                android:orientation="horizontal"
+                android:weightSum="6">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/basic_height"
+                    android:layout_weight="4"
+                    android:text="Meter"
+                    android:gravity=""
+                    android:textSize="@dimen/basic_font"
+                    android:textStyle="normal|bold" />
+
+                <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                    android:id="@+id/spMetter"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/basic_height"
+                    android:background="@drawable/spinner_bg"
+                    android:layout_weight="2" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spinner_margin_l"
+                android:layout_marginRight="@dimen/spinner_margin_l"
+                android:layout_marginBottom="@dimen/basic_MarginBottom"
+                android:orientation="horizontal"
+                android:weightSum="6">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/basic_height"
+                    android:layout_weight="4"
+                    android:text="Pin"
+                    android:gravity=""
+                    android:textSize="@dimen/basic_font"
+                    android:textStyle="normal|bold" />
+
+                <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                    android:id="@+id/spPin"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/basic_height"
+                    android:background="@drawable/spinner_bg"
+                    android:layout_weight="2" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spinner_margin_l"
+                android:layout_marginRight="@dimen/spinner_margin_l"
+                android:layout_marginBottom="@dimen/basic_MarginBottom"
+                android:orientation="horizontal"
+                android:weightSum="6">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/basic_height"
+                    android:layout_weight="4"
+                    android:text="Product"
+                    android:gravity=""
+                    android:textSize="@dimen/basic_font"
+                    android:textStyle="normal|bold" />
+
+                <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                    android:id="@+id/spProduct"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/basic_height"
+                    android:background="@drawable/spinner_bg"
+                    android:layout_weight="2" />
+                <Spinner
+                    android:visibility="gone"
+                    android:id="@+id/spProduct2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/basic_height"
+                    android:background="@drawable/spinner_bg"
+                    android:layout_weight="2">
+
+                </Spinner>
+            </LinearLayout>
+
+            <Spinner
+                android:visibility="gone"
+                android:id="@+id/spProduct1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/basic_height"
+                android:layout_marginLeft="@dimen/spinner_margin_l"
+                android:layout_marginRight="@dimen/spinner_margin_l"
+                android:layout_marginBottom="@dimen/basic_MarginBottom"
+                android:textColor="#000"
+                android:background="@drawable/spinner_bg"
+                android:textSize="@dimen/basic_font" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spinner_margin_l"
+                android:layout_marginRight="@dimen/spinner_margin_l"
+                android:layout_marginBottom="@dimen/basic_MarginBottom"
+                android:orientation="horizontal"
+                android:weightSum="6">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/basic_height"
+                    android:layout_weight="4"
+                    android:text="Warehouse"
+                    android:gravity=""
+                    android:textSize="@dimen/basic_font"
+                    android:textStyle="normal|bold" />
+                <Spinner
+                    android:id="@+id/spWareHouse"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/basic_height"
+                    android:background="@drawable/spinner_bg"
+                    android:layout_weight="2">
+
+                </Spinner>
+            </LinearLayout>
+
+            <Spinner
+                android:visibility="gone"
+                android:id="@+id/spWareHouse1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/basic_height"
+                android:layout_marginLeft="@dimen/spinner_margin_l"
+                android:layout_marginRight="@dimen/spinner_margin_l"
+                android:layout_marginBottom="@dimen/basic_MarginBottom"
+                android:textColor="#000"
+                android:background="@drawable/spinner_bg"
+                android:textSize="@dimen/basic_font" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <TextView
+                android:layout_width="@dimen/label_width"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="2"
+                android:text="Stock"
+                android:textSize="@dimen/basic_font"
+                android:textStyle="normal|bold" />
+
+            <EditText
+                android:id="@+id/txtStock"
+                android:layout_width="@dimen/textbox_height"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="4"
+                android:enabled="false"
+                android:background="@drawable/textbox_design"
+                android:textColor="#000"
+                android:inputType="numberDecimal"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:orientation="horizontal"
+            android:weightSum="6">
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="4"
+                android:text="Price Type"
+                android:gravity=""
+                android:textSize="@dimen/basic_font"
+                android:textStyle="normal|bold" />
+            <Spinner
+                android:id="@+id/spPriceType"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/basic_height"
+                android:background="@drawable/spinner_bg"
+                android:layout_weight="2">
+
+            </Spinner>
+        </LinearLayout>
+
+        <Spinner
+            android:visibility="gone"
+            android:id="@+id/spPriceType1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/basic_height"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:textColor="#000"
+            android:background="@drawable/spinner_bg"
+            android:textSize="@dimen/basic_font" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="@dimen/label_width"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="2"
+                android:text="Price"
+                android:textSize="@dimen/basic_font"
+                android:textStyle="normal|bold" />
+
+            <EditText
+                android:id="@+id/txtHPrice1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"/>
+
+            <EditText
+                android:id="@+id/txtPrice"
+                android:enabled="true"
+                android:layout_width="@dimen/textbox_height"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="4"
+                android:inputType="numberDecimal"
+                android:background="@drawable/textbox_design"
+                android:textColor="#000"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <TextView
+                android:layout_width="@dimen/label_width"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="2.8"
+                android:text="Quantity"
+                android:textSize="@dimen/basic_font"
+                android:textStyle="normal|bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="4"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <Button
+                    android:id="@+id/btnRemove"
+                    android:layout_width="47dp"
+                    android:background="@drawable/ic_remove_black_24dp"
+                    android:layout_height="@dimen/basic_height"
+                    android:layout_weight=".1" />
+
+                <EditText
+                    android:id="@+id/txtQuantity"
+                    android:layout_width="@dimen/textbox_height"
+                    android:layout_height="@dimen/basic_height"
+                    android:layout_weight="3"
+                    android:text="1"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/textbox_design"
+                    android:gravity="center" />
+                <Button
+                    android:id="@+id/btnAddQ"
+                    android:layout_width="47dp"
+                    android:background="@drawable/ic_add_black_24dp"
+                    android:layout_height="@dimen/basic_height"
+                    android:layout_weight=".1" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <TextView
+                android:layout_width="@dimen/label_width"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="2"
+                android:text="Discount"
+                android:textSize="@dimen/basic_font"
+                android:textStyle="normal|bold" />
+
+            <EditText
+                android:id="@+id/txtDiscount"
+                android:layout_width="@dimen/textbox_height"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="4"
+                android:background="@drawable/textbox_design"
+                android:gravity="center"
+                android:hint="%"
+                android:inputType="numberDecimal" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <TextView
+                android:layout_width="@dimen/label_width"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="2"
+                android:text="Dis TK"
+                android:textSize="@dimen/basic_font"
+                android:textStyle="normal|bold" />
+
+            <EditText
+                android:id="@+id/txtDiscountTk"
+                android:layout_width="@dimen/textbox_height"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="4"
+                android:background="@drawable/textbox_design"
+                android:gravity="center"
+                android:hint="tk"
+                android:inputType="numberDecimal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:weightSum="2.5">
+
+            <Button
+                android:id="@+id/btnReset"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:textColor="@color/basic_title"
+                android:background="@drawable/textbox_design"
+                android:text="Reset"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"/>
+            <Button
+                android:id="@+id/btnAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:background="@drawable/textbox_design"
+                android:textColor="@color/basic_title"
+                android:text="Add"/>
+
+        </LinearLayout>
+
+
+
+
+
+        <!--<view-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="2dp"-->
+        <!--android:background="@color/white"-->
+        <!--/>-->
+
+        <!--.................................................Total.....................................-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:orientation="horizontal"
+            android:weightSum="6">
+            <TextView
+                android:layout_width="@dimen/label_width"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="2"
+                android:text="@string/Total"
+                android:textSize="@dimen/basic_font"
+                android:textStyle="normal|bold" />
+
+            <EditText
+                android:id="@+id/txtTotal"
+                android:enabled="false"
+                android:layout_width="@dimen/textbox_height"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="4"
+                android:background="@drawable/textbox_design"
+                android:gravity="center" />
+        </LinearLayout>
+        <!--.................................................Previous Due................................-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:orientation="horizontal"
+            android:weightSum="6">
+            <TextView
+                android:layout_width="@dimen/label_width"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="2"
+                android:text="Previous Due"
+                android:textSize="@dimen/basic_font"
+                android:textStyle="normal|bold" />
+
+            <EditText
+                android:id="@+id/txtPreviousDue"
+                android:enabled="false"
+                android:layout_width="@dimen/textbox_height"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="4"
+                android:background="@drawable/textbox_design"
+                android:gravity="center" />
+        </LinearLayout>
+        <!--.................................................Payable Amount.....................................        -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:orientation="horizontal"
+            android:weightSum="6">
+            <TextView
+                android:layout_width="@dimen/label_width"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="2"
+                android:text="Less"
+                android:textSize="@dimen/basic_font"
+                android:textStyle="normal|bold" />
+
+            <EditText
+                android:id="@+id/txtOverLess"
+                android:layout_width="@dimen/textbox_height"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="4"
+                android:inputType="numberDecimal"
+                android:background="@drawable/textbox_design"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <TextView
+                android:layout_width="@dimen/label_width"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="2"
+                android:text="Shipping Cost"
+                android:textSize="@dimen/basic_font"
+                android:textStyle="normal|bold" />
+
+            <EditText
+                android:id="@+id/txtShippingCost"
+                android:layout_width="@dimen/textbox_height"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="4"
+                android:inputType="numberDecimal"
+                android:background="@drawable/textbox_design"
+                android:gravity="center" />
+        </LinearLayout>
+        <!--.................................................Payable Amount.....................................        -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:orientation="horizontal"
+            android:weightSum="6">
+            <TextView
+                android:layout_width="@dimen/label_width"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="2"
+                android:text="Payable"
+                android:textSize="@dimen/basic_font"
+                android:textStyle="normal|bold" />
+
+            <EditText
+                android:id="@+id/txtPayable"
+                android:layout_width="@dimen/textbox_height"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="4"
+                android:background="@drawable/textbox_design"
+                android:enabled="false"
+                android:gravity="center" />
+        </LinearLayout>
+        <!--.................................................Paid Amount.....................................        -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <TextView
+                android:layout_width="@dimen/label_width"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="2"
+                android:text="Paid Amount"
+                android:textSize="@dimen/basic_font"
+                android:textStyle="normal|bold" />
+
+            <EditText
+                android:id="@+id/txtPaidAmount"
+                android:layout_width="@dimen/textbox_height"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="4"
+                android:inputType="numberDecimal"
+                android:background="@drawable/textbox_design"
+                android:gravity="center" />
+        </LinearLayout>
+        <!--.................................................Due Amount.....................................       -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <TextView
+                android:layout_width="@dimen/label_width"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="2"
+                android:text="Due Amount"
+                android:textSize="@dimen/basic_font"
+                android:textStyle="normal|bold" />
+
+            <EditText
+                android:id="@+id/txtDueAmount"
+                android:enabled="false"
+                android:layout_width="@dimen/textbox_height"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="4"
+                android:background="@drawable/textbox_design"
+                android:gravity="center" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:orientation="horizontal"
+            android:weightSum="6">
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/basic_height"
+                android:layout_weight="4"
+                android:text="Pay Type"
+                android:gravity=""
+                android:textSize="@dimen/basic_font"
+                android:textStyle="normal|bold" />
+            <Spinner
+                android:id="@+id/spPaymentType"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/basic_height"
+                android:background="@drawable/spinner_bg"
+                android:layout_weight="2">
+
+            </Spinner>
+        </LinearLayout>
+
+        <Spinner
+            android:visibility="gone"
+            android:id="@+id/spPaymentType1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/basic_height"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:background="@drawable/spinner_bg"
+            android:textColor="#000"
+            android:textSize="@dimen/basic_font" />
+
+        <EditText
+            android:visibility="gone"
+            android:id="@+id/txtCheque"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/basic_height"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:background="@drawable/textbox_design"
+            android:gravity="center"
+            android:hint="@string/ChequeNo"
+            android:textColor="#000000"
+            android:textSize="@dimen/basic_font"
+            android:textStyle="normal|bold" />
+
+        <Spinner
+            android:visibility="gone"
+            android:id="@+id/spAccountNo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/basic_height"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:background="@drawable/spinner_bg"
+            android:textSize="@dimen/basic_font"/>
+
+        <Spinner
+            android:visibility="gone"
+            android:id="@+id/spBank"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/basic_height"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:background="@drawable/spinner_bg"
+            android:textSize="@dimen/basic_font"/>
+
+        <Spinner
+            android:visibility="gone"
+            android:id="@+id/spBrance"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/basic_height"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:background="@drawable/spinner_bg"
+            android:textSize="@dimen/basic_font"/>
+        <Spinner
+            android:visibility="gone"
+            android:id="@+id/spAccHead"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/basic_height"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:background="@drawable/spinner_bg"
+            android:textSize="@dimen/basic_font"/>
+
+
+        <EditText
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/basic_height"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:background="@drawable/textbox_design"
+            android:id="@+id/txtMDate"
+            android:clickable="true"
+            android:focusable="false"
+            android:gravity="center"
+            android:hint="Maturity Date"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:weightSum="2.1">
+            <Button
+                android:id="@+id/btnCancel"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:background="@drawable/cancel_button"
+                android:textColor="@color/white"
+                android:text="@string/cancel"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"/>
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:background="@drawable/single_btn"
+                android:text="@string/save"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:background="@color/basic_title"
+            android:weightSum="5">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:text="@string/Product"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:text="Qty"
+                android:textAlignment="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:text="@string/price"
+                android:textAlignment="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:text="Discunt"
+                android:textAlignment="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:text="@string/Total"
+                android:textAlignment="center"/>
+
+        </LinearLayout>
+
+
+        <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:orientation="vertical">-->
+        <!---->
+        <!--</LinearLayout>-->
+
+
+        <LinearLayout
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spinner_margin_l"
+            android:layout_marginRight="@dimen/spinner_margin_l"
+            android:layout_marginBottom="@dimen/basic_MarginBottom"
+            android:orientation="horizontal"
+            android:weightSum="6">
+            <!--<ListView-->
+                <!--android:layout_marginBottom="10dp"-->
+                <!--android:fillViewport="true"-->
+                <!--android:id="@android:id/list"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="100dp"-->
+                <!--android:scrollbars="vertical"-->
+                <!--android:divider="@color/basic_title"-->
+                <!--android:dividerHeight="1dp">-->
+
+            <!--</ListView>-->
+
+            <ScrollView
+                android:id="@+id/ScrollView02"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:scrollbars="horizontal|vertical">
+                <!--..........LIST ITEM START...........................-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical">
+
+                    <ListView
+                        android:layout_marginBottom="10dp"
+                        android:id="@android:id/list"
+                        android:layout_width="match_parent"
+                        android:layout_height="2000dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:divider="@color/basic_title"
+                        android:dividerHeight="1dp"
+                        android:fastScrollEnabled="false" />
+                </LinearLayout>
+                <!--..........LIST ITEM END...........................-->
+            </ScrollView>
+
+        </LinearLayout>
+
+        <ImageView
+
+            android:id="@+id/iv"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_below="@id/dlc"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@string/Sales_Title"
+            android:scaleType="fitCenter" />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+</android.support.v4.widget.NestedScrollView>
+</android.support.v4.widget.SwipeRefreshLayout>
